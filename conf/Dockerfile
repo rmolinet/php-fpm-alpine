@@ -11,11 +11,11 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	file \
 	g++ \
 	make \
-    libc-dev \
+    	libc-dev \
 	pkgconf \
+&& apk add --no-cache --virtual .persistent-deps \
 	openssl-dev \
 	curl-dev \
-&& apk add --no-cache --virtual .persistent-deps \
 	freetype-dev \
 	libjpeg-turbo-dev \
 	libpq \
