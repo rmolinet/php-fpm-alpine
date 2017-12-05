@@ -1,4 +1,4 @@
-FROM php:fpm-alpine
+FROM php:7.1-fpm-alpine
 
 LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
 
