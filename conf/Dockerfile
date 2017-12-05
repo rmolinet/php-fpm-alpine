@@ -1,4 +1,4 @@
-FROM php:7.1-fpm-alpine
+FROM php:fpm-alpine
 
 LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
 
@@ -7,7 +7,7 @@ ADD wkhtmltopdf /usr/bin/wkhtmltopdf
 RUN chmod +x /usr/bin/wkhtmltopdf \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
-    autoconf \
+    	autoconf \
 	file \
 	g++ \
 	make \
@@ -43,8 +43,8 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ttf-liberation \
 	ttf-ubuntu-font-family \
 
-&& pecl install xdebug \
-&& docker-php-ext-enable xdebug \
+#&& pecl install xdebug \
+#&& docker-php-ext-enable xdebug \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 
