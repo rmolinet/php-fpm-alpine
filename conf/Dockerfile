@@ -14,7 +14,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     	libc-dev \
 	pkgconf \
 && apk add --no-cache --virtual .persistent-deps \
-	openssl-dev \
+	libressl-dev \
 	curl-dev \
 	freetype-dev \
 	libjpeg-turbo-dev \
