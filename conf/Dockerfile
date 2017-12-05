@@ -23,7 +23,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libldap \
 	openldap-dev \
 	libxslt-dev \
-	libmcrypt-dev \
+	#libmcrypt-dev \
 	icu-dev \
 	libxml2-dev \
 	libpng-dev \
@@ -61,7 +61,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ldap \
 	intl \
 	curl \
-	mcrypt \
+	#mcrypt \
 	json \
 
 && apk del .build-deps \
