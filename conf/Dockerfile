@@ -1,4 +1,4 @@
-FROM php:fpm-alpine
+FROM php:7.1-fpm-alpine
 
 LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
 
@@ -14,7 +14,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     	libc-dev \
 	pkgconf \
 && apk add --no-cache --virtual .persistent-deps \
-	libressl-dev \
+	openssl-dev \
 	curl-dev \
 	freetype-dev \
 	libjpeg-turbo-dev \
@@ -23,7 +23,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libldap \
 	openldap-dev \
 	libxslt-dev \
-	#libmcrypt-dev \
+	libmcrypt-dev \
 	icu-dev \
 	libxml2-dev \
 	libpng-dev \
@@ -43,8 +43,8 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ttf-liberation \
 	ttf-ubuntu-font-family \
 
-#&& pecl install xdebug \
-#&& docker-php-ext-enable xdebug \
+&& pecl install xdebug \
+&& docker-php-ext-enable xdebug \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 
@@ -61,7 +61,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ldap \
 	intl \
 	curl \
-	#mcrypt \
+	mcrypt \
 	json \
 
 && apk del .build-deps \
