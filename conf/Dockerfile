@@ -6,7 +6,7 @@ ADD wkhtmltopdf /usr/bin/wkhtmltopdf
 ADD composer.phar /usr/local/bin/composer.phar
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
-&& chmod +x /usr/local/bin/composer.phar
+&& chmod +x /usr/local/bin/composer.phar \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
     autoconf \
