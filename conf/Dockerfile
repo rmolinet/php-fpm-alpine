@@ -3,15 +3,17 @@ FROM php:7.1-fpm-alpine
 LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
 
 ADD wkhtmltopdf /usr/bin/wkhtmltopdf
+ADD composer.phar /usr/local/bin/composer.phar
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
+&& chmod +x /usr/local/bin/composer.phar
 && apk update \
 && apk add --no-cache --virtual .build-deps \
-    	autoconf \
+    autoconf \
 	file \
 	g++ \
 	make \
-    	libc-dev \
+    libc-dev \
 	pkgconf \
 && apk add --no-cache --virtual .persistent-deps \
 	openssl-dev \
