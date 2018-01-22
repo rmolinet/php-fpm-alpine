@@ -3,10 +3,10 @@ FROM php:7.1-fpm-alpine
 LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
 
 ADD wkhtmltopdf /usr/bin/wkhtmltopdf
-ADD composer.phar /usr/local/bin/composer.phar
+ADD composer.phar /usr/local/bin/composer
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
-&& chmod +x /usr/local/bin/composer.phar \
+&& chmod +x /usr/local/bin/composer \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
     autoconf \
