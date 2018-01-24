@@ -54,6 +54,8 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	pdo \
 	pgsql \
 	pdo_pgsql \
+	mysqli \
+	pdo_mysql \
 	soap \
 	gd \
 	bcmath \
