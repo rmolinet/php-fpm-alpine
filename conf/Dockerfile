@@ -45,8 +45,10 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ttf-liberation \
 	ttf-ubuntu-font-family \
 
-&& pecl install xdebug  imagick \
-&& docker-php-ext-enable xdebug imagick \
+&& pecl install xdebug \
+&& pecl install imagick \
+&& docker-php-ext-enable xdebug \
+&& docker-php-ext-enable imagick \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 
