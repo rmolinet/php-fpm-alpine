@@ -30,6 +30,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libxml2-dev \
 	libpng-dev \
 	zlib-dev \
+	imagemagick-dev \
 	libxrender \
 	fontconfig \
 	libx11 \
