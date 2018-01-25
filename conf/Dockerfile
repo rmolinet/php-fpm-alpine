@@ -16,6 +16,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     libc-dev \
 	pkgconf \
 && apk add --no-cache --virtual .persistent-deps \
+	openssh-server \
 	openssl-dev \
 	curl-dev \
 	freetype-dev \
@@ -31,6 +32,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libpng-dev \
 	zlib-dev \
 	imagemagick-dev \
+	libtool \
 	libxrender \
 	fontconfig \
 	libx11 \
