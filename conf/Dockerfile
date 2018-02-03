@@ -71,9 +71,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     mbstring \
     tokenizer \
     xml \
-    xmlreader \
     xmlrpc \
-    xmlwriter\
 
 && apk del .build-deps \
 && rm -rf /var/cache/apk/*
