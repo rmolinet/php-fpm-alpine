@@ -30,8 +30,6 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libxml2-dev \
 	libpng-dev \
 	zlib-dev \
-	imagemagick-dev \
-	libtool \
 	libxrender \
 	fontconfig \
 	libx11 \
@@ -48,9 +46,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ttf-ubuntu-font-family \
 
 && pecl install xdebug \
-&& pecl install imagick \
 && docker-php-ext-enable xdebug \
-&& docker-php-ext-enable imagick \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 
@@ -72,6 +68,12 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	mcrypt \
 	json \
     opcache \
+    mbstring \
+    tokenizer \
+    xml \
+    xmlreader \
+    xmlrpc \
+    xmlwriter\
 
 && apk del .build-deps \
 && rm -rf /var/cache/apk/*
