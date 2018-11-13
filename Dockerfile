@@ -45,8 +45,9 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ttf-liberation \
 	ttf-ubuntu-font-family \
 
-&& pecl install xdebug mcrypt \
+&& pecl install xdebug \
 && docker-php-ext-enable xdebug \
+&& pecl install mcrypt \
 && docker-php-ext-enable mcrypt \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
