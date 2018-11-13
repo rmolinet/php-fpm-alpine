@@ -1,4 +1,4 @@
-FROM php:7.1-fpm-alpine
+FROM php:7.2-fpm-alpine
 
 LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
 
@@ -13,23 +13,23 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	file \
 	g++ \
 	make \
-    libc-dev \
+    	libc-dev \
 	pkgconf \
-&& apk add --no-cache --virtual .persistent-deps \
-	openssl-dev \
-	curl-dev \
+	libressl-dev \
 	freetype-dev \
 	libjpeg-turbo-dev \
-	libpq \
 	postgresql-dev \
-	libldap \
 	openldap-dev \
-	libxslt-dev \
-	libmcrypt-dev \
-	icu-dev \
+	curl-dev \
 	libxml2-dev \
 	libpng-dev \
 	zlib-dev \
+&& apk add --no-cache --virtual .persistent-deps \
+	libpq \
+	libldap \
+	libxslt-dev \
+	libmcrypt-dev \
+	icu-dev \
 	libxrender \
 	fontconfig \
 	libx11 \
@@ -67,11 +67,11 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	curl \
 	mcrypt \
 	json \
-    opcache \
-    mbstring \
-    tokenizer \
-    xml \
-    xmlrpc \
+    	opcache \
+    	mbstring \
+    	tokenizer \
+    	xml \
+    	xmlrpc \
 
 && apk del .build-deps \
 && rm -rf /var/cache/apk/*
