@@ -13,7 +13,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	file \
 	g++ \
 	make \
-    	libc-dev \
+    libc-dev \
 	pkgconf \
 	libressl-dev \
 	freetype-dev \
@@ -25,6 +25,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libpng-dev \
 	zlib-dev \
 && apk add --no-cache --virtual .persistent-deps \
+	libjpeg \
 	libpq \
 	libldap \
 	libxslt-dev \
@@ -68,11 +69,11 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	intl \
 	curl \
 	json \
-    	opcache \
-    	mbstring \
-    	tokenizer \
-    	xml \
-    	xmlrpc \
+    opcache \
+    mbstring \
+    tokenizer \
+    xml \
+    xmlrpc \
 
 && apk del .build-deps \
 && rm -rf /var/cache/apk/*
