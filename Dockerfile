@@ -24,7 +24,6 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libxml2-dev \
 	libpng-dev \
 	zlib-dev \
-	imagemagick-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libjpeg \
 	libpq \
@@ -32,6 +31,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libxslt-dev \
 	libmcrypt-dev \
 	icu-dev \
+	imagemagick-dev \
 	libxrender \
 	fontconfig \
 	libx11 \
