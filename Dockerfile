@@ -50,6 +50,8 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 && docker-php-ext-enable xdebug \
 && pecl install mcrypt-1.0.1 \
 && docker-php-ext-enable mcrypt \
+&& pecl install imagick \
+&& docker-php-ext-enable imagick \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 
