@@ -49,8 +49,6 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
-&& pecl install mcrypt-1.0.1 \
-&& docker-php-ext-enable mcrypt \
 && pecl install imagick \
 && docker-php-ext-enable imagick \
 
@@ -71,6 +69,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	ldap \
 	intl \
 	curl \
+	mcrypt \
 	json \
     opcache \
     mbstring \
