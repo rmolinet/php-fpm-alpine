@@ -1,6 +1,6 @@
-FROM php:7.2-fpm-alpine
+FROM php:7.3-fpm-alpine
 
-LABEL maintainer="macias@uci.cu, rmolinet@uci.cu"
+LABEL maintainer="rrmolinet@gmail.com"
 
 ADD wkhtmltopdf /usr/bin/wkhtmltopdf
 ADD composer.phar /usr/local/bin/composer
