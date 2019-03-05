@@ -29,6 +29,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libpq \
 	libldap \
 	libxslt-dev \
+	libmcrypt \
 	libmcrypt-dev \
 	icu-dev \
 	imagemagick-dev \
