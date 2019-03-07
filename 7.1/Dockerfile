@@ -27,13 +27,14 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	zlib-dev \
 	libxslt-dev \
 	libmcrypt-dev \
+	icu-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libjpeg \
 	libpq \
 	libldap \
 	libxslt \
 	libmcrypt \
-	icu-dev \
+	icu \
 	imagemagick \
 	libxrender \
 	fontconfig \
