@@ -10,42 +10,46 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
     autoconf \
-	file \
-	g++ \
-	make \
+    file \
+    g++ \
+    make \
     libc-dev \
-	pkgconf \
-	libressl-dev \
-	freetype-dev \
-	libjpeg-turbo-dev \
-	postgresql-dev \
-	openldap-dev \
-	curl-dev \
-	libxml2-dev \
-	libpng-dev \
-	zlib-dev \
+    pkgconf \
+    libressl-dev \
+    freetype-dev \
+    libjpeg-turbo-dev \
+    postgresql-dev \
+    imagemagick-dev \
+    openldap-dev \
+    curl-dev \
+    libxml2-dev \
+    libpng-dev \
+    zlib-dev \
+    libxslt-dev \
+    libmcrypt-dev \
+    icu-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libjpeg \
-	libpq \
-	libldap \
-	libxslt-dev \
-	libmcrypt-dev \
-	icu-dev \
-	imagemagick-dev \
-	libxrender \
-	fontconfig \
-	libx11 \
-	libxext \
-	libintl \
-	glib \
-	libgcc \
-	libstdc++ \
-	ttf-freefont \
-	ttf-dejavu \
-	ttf-droid \
-	ttf-freefont \
-	ttf-liberation \
-	ttf-ubuntu-font-family \
+    libpq \
+    libldap \
+    libxslt \
+    libmcrypt \
+    icu \
+    imagemagick \
+    libxrender \
+    fontconfig \
+    libx11 \
+    libxext \
+    libintl \
+    glib \
+    libgcc \
+    libstdc++ \
+    ttf-freefont \
+    ttf-dejavu \
+    ttf-droid \
+    ttf-freefont \
+    ttf-liberation \
+    ttf-ubuntu-font-family \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
