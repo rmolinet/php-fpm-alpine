@@ -29,7 +29,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libpq \
 	libldap \
 	libxslt-dev \
-	php7-pecl-mcrypt \
+	#libmcrypt-dev \
 	icu-dev \
 	imagemagick-dev \
 	libxrender \
@@ -49,8 +49,8 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
-&& pecl install mcrypt-1.0.0 \
-&& docker-php-ext-enable mcrypt \
+#&& pecl install mcrypt-1.0.0 \
+#&& docker-php-ext-enable mcrypt \
 && pecl install imagick \
 && docker-php-ext-enable imagick \
 
