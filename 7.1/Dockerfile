@@ -25,12 +25,14 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libxml2-dev \
 	libpng-dev \
 	zlib-dev \
+	libxslt-dev \
+	libmcrypt-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libjpeg \
 	libpq \
 	libldap \
-	libxslt-dev \
-	#libmcrypt-dev \
+	libxslt \
+	libmcrypt \
 	icu-dev \
 	imagemagick \
 	libxrender \
@@ -50,8 +52,8 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
-#&& pecl install mcrypt-1.0.0 \
-#&& docker-php-ext-enable mcrypt \
+&& pecl install mcrypt-1.0.0 \
+&& docker-php-ext-enable mcrypt \
 && pecl install imagick \
 && docker-php-ext-enable imagick \
 
