@@ -19,6 +19,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	freetype-dev \
 	libjpeg-turbo-dev \
 	postgresql-dev \
+	imagemagick-dev \
 	openldap-dev \
 	curl-dev \
 	libxml2-dev \
@@ -31,7 +32,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libxslt-dev \
 	#libmcrypt-dev \
 	icu-dev \
-	imagemagick-dev \
+	imagemagick \
 	libxrender \
 	fontconfig \
 	libx11 \
