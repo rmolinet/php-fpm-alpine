@@ -16,8 +16,6 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	make \
     libc-dev \
 	pkgconf \
-	libressl-dev \
-	#openssl-dev \
 	freetype-dev \
 	libjpeg-turbo-dev \
 	postgresql-dev \
@@ -25,13 +23,14 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	curl-dev \
 	libxml2-dev \
 	libpng-dev \
-	zlib-dev \
 	libxslt-dev \
     libmcrypt-dev \
     icu-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libressl \
+	libressl-dev \
 	zlib \
+	zlib-dev \
 	libxslt \
     libmcrypt \
     icu \
