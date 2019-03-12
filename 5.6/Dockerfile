@@ -24,13 +24,10 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	libressl-dev \
 	libxml2-dev \
 	libpng-dev \
-	libxslt-dev \
-    zlib-dev \
+	zlib-dev \
 && apk add --no-cache --virtual .persistent-deps \
-	libxslt \
-    libmcrypt \
+	libxslt-dev \
     libmcrypt-dev \
-    icu \
     icu-dev \
 	libjpeg \
 	libpq \
