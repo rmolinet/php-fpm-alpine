@@ -21,18 +21,16 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	postgresql-dev \
 	openldap-dev \
 	curl-dev \
+	libressl-dev \
 	libxml2-dev \
 	libpng-dev \
 	libxslt-dev \
-    libmcrypt-dev \
     icu-dev \
+    zlib-dev \
 && apk add --no-cache --virtual .persistent-deps \
-	libressl \
-	libressl-dev \
-	zlib \
-	zlib-dev \
 	libxslt \
     libmcrypt \
+    libmcrypt-dev \
     icu \
 	libjpeg \
 	libpq \
