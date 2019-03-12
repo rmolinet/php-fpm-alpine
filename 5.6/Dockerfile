@@ -16,19 +16,20 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	make \
     libc-dev \
 	pkgconf \
+	libressl-dev \
+	#openssl-dev \
 	freetype-dev \
 	libjpeg-turbo-dev \
 	postgresql-dev \
 	openldap-dev \
 	curl-dev \
-	libressl-dev \
 	libxml2-dev \
 	libpng-dev \
 	zlib-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libxslt-dev \
-    libmcrypt-dev \
-    icu-dev \
+	libmcrypt-dev \
+	icu-dev \
 	libjpeg \
 	libpq \
 	libldap \
