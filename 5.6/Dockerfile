@@ -33,6 +33,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     libssl1.0 \
     libxslt \
     libmcrypt \
+    libjpeg \
 	icu \
 	libpq \
 	libldap \
