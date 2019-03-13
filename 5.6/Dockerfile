@@ -31,7 +31,9 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 	zlib-dev \
 && apk add --no-cache --virtual .persistent-deps \
     libssl1.0 \
-	libjpeg \
+    libxslt \
+    libmcrypt \
+	icu \
 	libpq \
 	libldap \
 	libxrender \
