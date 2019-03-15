@@ -29,7 +29,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     icu-dev \
     imagemagick-dev \
 && apk add --no-cache --virtual .persistent-deps \
-	libssl1.1 \
+	libssl1.0 \
     libxslt \
     libmcrypt \
     imagemagick \
