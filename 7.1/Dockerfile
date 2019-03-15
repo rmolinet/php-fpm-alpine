@@ -32,7 +32,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     #freetype \
     #libpng \
     #libjpeg-turbo \
-	#libjpeg \
+	libjpeg \
 	libpq \
 	libldap \
 	libxslt \
