@@ -3,11 +3,11 @@ FROM php:7.1-fpm-alpine
 LABEL maintainer="rrmolinet@gmail.com"
 
 ADD wkhtmltopdf /usr/bin/wkhtmltopdf
-#ADD composer.phar /usr/local/bin/composer
+ADD composer-uci.phar /usr/local/bin/composer-uci
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
+&& chmod +x /usr/local/bin/composer-uci \
 && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-#&& chmod +x /usr/local/bin/composer \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
     autoconf \
