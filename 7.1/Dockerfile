@@ -6,7 +6,7 @@ ADD wkhtmltopdf /usr/bin/wkhtmltopdf
 #ADD composer.phar /usr/local/bin/composer
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
-&& curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+&& curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 #&& chmod +x /usr/local/bin/composer \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
