@@ -3,10 +3,9 @@ FROM php:7.0-fpm-alpine
 LABEL maintainer="rrmolinet@gmail.com"
 
 ADD wkhtmltopdf /usr/bin/wkhtmltopdf
-ADD composer.phar /usr/local/bin/composer
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
-&& chmod +x /usr/local/bin/composer \
+&& curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
     autoconf \
@@ -55,8 +54,12 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
+&& pecl install mcrypt-1.0.2 \
+&& docker-php-ext-enable mcrypt \
 && pecl install imagick \
 && docker-php-ext-enable imagick \
+&& pecl install redis \
+&& docker-php-ext-enable redis \
 
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 
