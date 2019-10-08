@@ -3,10 +3,8 @@ FROM php:7.2-fpm-alpine
 LABEL maintainer="rrmolinet@gmail.com"
 
 ADD wkhtmltopdf /usr/bin/wkhtmltopdf
-ADD composer-uci.phar /usr/local/bin/composer-uci
 
 RUN chmod +x /usr/bin/wkhtmltopdf \
-&& chmod +x /usr/local/bin/composer-uci \
 && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 && apk update \
 && apk add --no-cache --virtual .build-deps \
@@ -54,7 +52,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
-&& pecl install mcrypt-1.0.2 \
+&& pecl install mcrypt-1.0.3 \
 && docker-php-ext-enable mcrypt \
 && pecl install imagick \
 && docker-php-ext-enable imagick \
