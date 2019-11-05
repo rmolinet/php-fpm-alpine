@@ -23,6 +23,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     libxml2-dev \
     libpng-dev \
     zlib-dev \
+    libzip-dev \
     libxslt-dev \
     libmcrypt-dev \
     icu-dev \
