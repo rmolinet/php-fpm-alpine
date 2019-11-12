@@ -33,6 +33,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     libldap \
     libxslt \
     libmcrypt \
+    libzip \
     icu \
     imagemagick \
     libxrender \
