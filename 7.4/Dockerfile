@@ -27,7 +27,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     libxslt-dev \
     libmcrypt-dev \
     icu-dev \
-    libonig-dev \
+    oniguruma-dev \
 && apk add --no-cache --virtual .persistent-deps \
 	libjpeg \
     libpq \
