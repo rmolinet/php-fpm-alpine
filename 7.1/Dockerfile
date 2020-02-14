@@ -81,6 +81,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     tokenizer \
     xml \
     xmlrpc \
+    calendar \
 
 && apk del .build-deps \
 && rm -rf /var/cache/apk/*
