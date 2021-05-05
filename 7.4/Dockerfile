@@ -29,6 +29,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     icu-dev \
     oniguruma-dev \
 && apk add --no-cache --virtual .persistent-deps \
+    git \
 	libjpeg \
     libpq \
     libldap \

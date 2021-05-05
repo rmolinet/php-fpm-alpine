@@ -28,6 +28,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     libmcrypt-dev \
     icu-dev \
 && apk add --no-cache --virtual .persistent-deps \
+    git \
 	libjpeg \
     libpq \
     libldap \
