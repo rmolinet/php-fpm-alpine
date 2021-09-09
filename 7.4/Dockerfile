@@ -86,7 +86,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     xml \
     xmlrpc \
     calendar \
-
+    exif \
 && apk del .build-deps \
 && rm -rf /var/cache/apk/*
 
