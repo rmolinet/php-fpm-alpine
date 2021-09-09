@@ -51,7 +51,7 @@ RUN chmod +x /usr/bin/wkhtmltopdf \
     ttf-droid \
     ttf-freefont \
     ttf-liberation \
-    ttf-ubuntu-font-family \
+    ttf-font-awesome \
 
 && pecl install xdebug \
 && docker-php-ext-enable xdebug \
